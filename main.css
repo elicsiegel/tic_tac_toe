@@ -4,7 +4,16 @@
   align-items: center;
 }
 
+.game-wrapper h1 {
+  margin-bottom: 3px;
+}
+
+.message-div {
+  margin-bottom: 5px;
+}
+
 .board {
+  margin-top: 3px;
   height: 300px;
   width: 300px;
 }
