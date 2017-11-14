@@ -12,10 +12,20 @@ class Game extends React.Component {
     }
     this.startGame = this.startGame.bind(this);
     this.handleMove = this.handleMove.bind(this);
+    this.resetGame = this.resetGame.bind(this);
   }
 
   startGame() {
     this.setState({started: true, currentPlayer: "X"});
+  }
+
+  resetGame() {
+    this.setState({
+      currentPlayer: "X",
+      squares: [null, null, null, null, null, null, null, null, null],
+      over: false,
+      winner: null
+    });
   }
 
   handleMove(i) {
@@ -59,6 +69,7 @@ class Game extends React.Component {
     let startButton;
     let currentPlayer;
     let winner;
+    let resetButton;
 
     if (!this.state.started && !this.state.over) {
       startButton = <button onClick={this.startGame}>Click here to Start</button>
@@ -66,6 +77,7 @@ class Game extends React.Component {
       currentPlayer = "Hey " + this.state.currentPlayer + ", it's your turn!";
     } else {
       winner = this.state.winner + " is the victor!";
+      resetButton = <button onClick={this.resetGame}>Click here to play again</button>
     }
 
     return (
@@ -77,6 +89,7 @@ class Game extends React.Component {
           {startButton}
           {currentPlayer}
           {winner}
+          {resetButton}
         </div>
         <Board squares={this.state.squares} handleMove={this.handleMove}/>
       </div>
