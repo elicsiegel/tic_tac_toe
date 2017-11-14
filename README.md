@@ -4,7 +4,9 @@ Implementation of Tic Tac Toe using React.js
 
 ## Using the demo
 
-[Click here](http://elicsiegel.com/tic_tac_toe) Click start button to start game then click a square to play a move. Click play again to restart game.
+[Click here to access demo](http://elicsiegel.com/tic_tac_toe)
+
+Click start button to start game then click a square to play a move. Click play again to restart game.
 
 ## Code
 
