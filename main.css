@@ -1,3 +1,7 @@
+body {
+  font-family: fantasy;
+}
+
 .game-wrapper {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,12 @@
 }
 
 .game-wrapper h1 {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
+}
+
+.game-wrapper p {
+  margin-top: 2px;
+  margin-bottom: 4px;
 }
 
 .message-div {
@@ -25,6 +34,8 @@
 }
 
 .square {
+  text-align: center;
+  font-size: 80px;
   width: 33%;
   height: 100%;
   border: 1px solid;

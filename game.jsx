@@ -20,6 +20,7 @@ class Game extends React.Component {
 
   handleMove(i) {
     if (!this.state.started) return;
+    if (this.state.over) return;
 
     const squares = this.state.squares;
     squares[i] = this.state.currentPlayer;
@@ -70,6 +71,8 @@ class Game extends React.Component {
     return (
       <div className="game-wrapper">
         <h1>Welcome to Tic Tac Toe</h1>
+        <p>by Eli Siegel</p>
+
         <div className="message-div">
           {startButton}
           {currentPlayer}
