@@ -42,6 +42,18 @@ class Game extends React.Component {
     if (this.checkForWinner() === "X" || this.checkForWinner() === "O") {
       this.setState({ over: true, winner: this.checkForWinner() });
     }
+
+    if (this.checkForTie()) {
+      this.setState({ over: true, winner: "No one"});
+    }
+  }
+
+  checkForTie() {
+    const isTied = this.state.squares.every((el) => {
+      return el === "X" || el === "O"
+    });
+  
+    return isTied;
   }
 
   checkForWinner() {
