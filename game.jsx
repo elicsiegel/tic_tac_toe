@@ -43,7 +43,7 @@ class Game extends React.Component {
       this.setState({ over: true, winner: this.checkForWinner() });
     }
 
-    if (this.checkForTie()) {
+    if (this.checkForTie() && !this.checkForWinner()) {
       this.setState({ over: true, winner: "No one"});
     }
   }
@@ -52,7 +52,7 @@ class Game extends React.Component {
     const isTied = this.state.squares.every((el) => {
       return el === "X" || el === "O"
     });
-  
+
     return isTied;
   }
 

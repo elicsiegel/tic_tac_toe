@@ -9678,7 +9678,7 @@ var Game = function (_React$Component) {
         this.setState({ over: true, winner: this.checkForWinner() });
       }
 
-      if (this.checkForTie()) {
+      if (this.checkForTie() && !this.checkForWinner()) {
         this.setState({ over: true, winner: "No one" });
       }
     }
